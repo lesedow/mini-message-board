@@ -12,7 +12,7 @@
         <li>
           <h4><%= message.author %></h4>
           <p><%= message.body %></p>
-          <small><%= message.added.toLocaleDateString() %></small>
+          <small><%= message.formatDate %></small>
         </li>
       <% }); %>
     </ul>

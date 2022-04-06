@@ -7,9 +7,9 @@ const postSchema = new Schema({
   added: {type: Date}
 });
 
-// postSchema.virtual('formatDate').get(function() {
-//   const hoursMinutes = `${this.added.getHours()}:${this.added.getMinutes()}`;
-//   return `${this.added.toLocaleDateString()} - ${hoursMinutes}`;
-// });
+postSchema.virtual('formatDate').get(function() {
+  const hoursMinutes = `${this.added.getHours()}:${this.added.getMinutes()}`;
+  return `${this.added.toLocaleDateString()} - ${hoursMinutes}`;
+});
 
 module.exports = mongoose.model('Post', postSchema);
