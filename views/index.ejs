@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <ul>
+      <% messages.forEach(function(message){ %>
+        <li>
+          <h4><%= message.author %></h4>
+          <p><%= message.body %></p>
+          <small><%= message.added.toLocaleDateString() %></small>
+        </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
